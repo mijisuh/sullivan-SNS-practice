@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { Divider } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
+import Profile from '../components/myfeed/Profile';
+import AvatarMaterial from '../components/common/AvatarMaterial';
+import PhotoGrid from "../components/myfeed/PhotoGrid";
 
 const useStyles = makeStyles((theme) => ({
   divider: {
@@ -10,6 +13,8 @@ const useStyles = makeStyles((theme) => ({
 
 const myfeed = () => {
   const classes = useStyles();
+
+  const [state, setState] = useState(''); // react의 함수, 변수가 계속 변화하는 값을 가질 때
 
   const user = {
     caption: "안녕하세요 반가워요 🙂",
@@ -51,9 +56,15 @@ const myfeed = () => {
 
   return (
     <>
+      {/* <AvatarMaterial /> */}
+      
       {/* Profile 컴포넌트(유저의 프로필 정보를 가진 컴포넌트)를 조립해주세요. */}
+      <Profile user={user} feedList={feedList} />
+
       <Divider variant="middle" light className={classes.divider} />
+
       {/* PhotoGrid 컴포넌트(유저가 올린 피드가 뜨는 컴포넌트)를 조립해주세요. */}
+      <PhotoGrid feedList={feedList} />
     </>
   );
 };
