@@ -1,7 +1,8 @@
 import React from "react";
 import { Grid, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import Avatar from "../common/Avatar";
+import Avatar from '../common/Avatar';
+import { display } from "@material-ui/system";
 
 const useStyles = makeStyles(() => ({
   profile: {
@@ -23,6 +24,12 @@ const Profile = ({ user }) => {
         spacing={4}
       >
         <Grid item>
+          { /** 
+           * 삼항 연산자
+           * 조건 ? 조건이 참일 경우 실행 구문 : 조건이 거짓일 경우 실행 구문
+           */ }
+
+          { user ? <Avatar size={1} photoUrl={user.photoUrl} displayName={user.displayName} /> : (<p>유저 정보 받아와라!</p>) }
           {/* Avatar 컴포넌트를 불러오고 필요한 props를 전달해주세요. */}
           <Avatar
             size={2}

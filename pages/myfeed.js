@@ -40,9 +40,12 @@ const myfeed = () => {
   if (loading) return <PageLoading />;
   return (
     <>
+      {/* <AvatarMaterial /> */}
+      
       {/* Profile 컴포넌트(유저의 프로필 정보를 가진 컴포넌트)를 조립해주세요. */}
       <Profile user={user} />
       <Divider variant="middle" light className={classes.divider} />
+
       {/* PhotoGrid 컴포넌트(유저가 올린 피드가 뜨는 컴포넌트)를 조립해주세요. */}
       <PhotoGrid feedList={feedList} />
     </>
