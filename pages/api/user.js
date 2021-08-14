@@ -1,6 +1,6 @@
 import firebase from "../../firestores/firebase";
 
-const userId = "";
+const userId = "oogzRoDKRElCa3tPgxOK";
 const db = firebase.firestore();
 
 /*

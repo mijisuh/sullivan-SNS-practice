@@ -43,7 +43,7 @@ const useStyles = makeStyles(() => ({
 
 const DetailFeed = (
   {
-    /* 알맞은 props를 전달해주세요. */
+    feed, deleteHandler, user
   }
 ) => {
   const classes = useStyles();
@@ -67,7 +67,7 @@ const DetailFeed = (
             />
           }
           action={
-            <PopperMenu deleteHandler={/* 채워주세요. */} feedUid={/* 채워주세요. */} />
+            <PopperMenu deleteHandler={deleteHandler} feedUid={feed.uid} />
           }
           title={feed.author.displayName}
           subheader={createAT + " " + feed.location}

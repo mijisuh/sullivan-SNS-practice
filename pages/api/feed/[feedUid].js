@@ -1,3 +1,4 @@
+import { array } from "prop-types";
 import firebase from "../../../firestores/firebase";
 
 const db = firebase.firestore();

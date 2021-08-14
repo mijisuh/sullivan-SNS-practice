@@ -21,7 +21,8 @@ const useStyles = makeStyles((theme) => ({
 
 const PopperMenu = (
   {
-    /* 알맞은 props를 전달해주세요. */
+    deleteHandler,
+    feedUid
   }
 ) => {
   const classes = useStyles();
